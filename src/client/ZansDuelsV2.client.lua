@@ -24,3 +24,5 @@ title.TextColor3 = Color3.fromRGB(255,80,80)
 title.Parent = main
 
 print("Zans Duels client loaded")
+
+-- github force update 02/01/2026 14:01:24

@@ -1,14 +1,27 @@
-local Theme = {}
+local Settings = {}
 
-Theme.Background = Color3.fromRGB(12,12,14)
-Theme.Panel = Color3.fromRGB(18,18,22)
-Theme.Accent = Color3.fromRGB(160,80,255)
-Theme.Text = Color3.fromRGB(235,235,245)
-Theme.SubText = Color3.fromRGB(170,170,185)
-Theme.Muted = Color3.fromRGB(55,55,65)
+-- UI / Keybind
+Settings.OpenKey = Enum.KeyCode.RightShift
 
-Theme.Font = Enum.Font.Gotham
-Theme.FontBold = Enum.Font.GothamBold
-Theme.Radius = 14
+-- Limits (server clamps these)
+Settings.Movement = {
+	WalkSpeedMin = 8,
+	WalkSpeedMax = 80,
+	JumpPowerMin = 25,
+	JumpPowerMax = 150,
+}
 
-return Theme
+-- Assist settings
+Settings.Assist = {
+	PickupRange = 10,          -- studs
+	PickupTick = 0.12,         -- seconds between pickup attempts
+	AutoDisableOnPlot = true,  -- client logic toggle supported
+}
+
+-- CollectionService tag used for "brainrots"
+Settings.BrainrotTag = "Brainrot"
+
+-- If your game has plot zones tagged with this, we can auto-disable on plot.
+Settings.PlotZoneTag = "PlotZone"
+
+return Settings
